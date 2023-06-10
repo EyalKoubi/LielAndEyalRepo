@@ -42,8 +42,8 @@ const RockPaperScissors = () => {
 
   // Event handler for player choice
   const handlePlayerChoice = (choice: string) => {
-<<<<<<< HEAD
-    generateComputerChoice(choice);
+    setPlayerChoice(choice);
+    generateComputerChoice();
   };
 
   // Generate computer choice randomly and determine the result
@@ -55,26 +55,9 @@ const RockPaperScissors = () => {
   };
 
   // Determine the result based on the player and computer choices
-  const determineResult = (computerChoice: string, playerChoice: string) => {
-    setPlayerChoice(playerChoice);
-=======
-    setPlayerChoice(choice);
-    generateComputerChoice();
-  };
-
-  // Generate computer choice randomly and determine the result
-  const generateComputerChoice = () => {
-    const choices = ["rock", "paper", "scissors"];
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-    setComputerChoice(randomChoice);
-    determineResult(randomChoice);
-  };
-
-  // Determine the result based on the player and computer choices
   const determineResult = (computerChoice: string) => {
     console.log("player: " + playerChoice);
     console.log("computer: " + computerChoice);
->>>>>>> 26f5bdd (Initial commit)
     if (playerChoice === computerChoice) {
       setResult("tie");
     } else if (
